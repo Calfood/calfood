@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Valor do Litro de Leite</ion-label>
+      <ion-input type="text" [(ngModel)]="leite"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Valor do kg da ração</ion-label>
+      <ion-input type="text" [(ngModel)]="racao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Valor do kg do feno</ion-label>
+      <ion-input type="text" [(ngModel)]="feno"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+    <button ion-button (click)="openPageRestricoes()" round full>Atualizar</button>
+</ion-content>

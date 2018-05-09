@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>restrições</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Quantidade de bezerro de até 2 meses</ion-label>
+      <ion-input type="text" [(ngModel)]="doismeses"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Quantidade de bezerro de 2 - 6 meses</ion-label>
+      <ion-input type="text" [(ngModel)]="doisaseismeses"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+    <button ion-button  round full>Emitir Relatório</button>
+</ion-content>
