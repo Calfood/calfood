@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RelatorioPage } from '../relatorio/relatorio';
 
 /**
- * Generated class for the RestriçõesPage page.
+ * Generated class for the RelatorioPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,10 +10,10 @@ import { RelatorioPage } from '../relatorio/relatorio';
 
 @IonicPage()
 @Component({
-  selector: 'page-restricoes',
-  templateUrl: 'restricoes.html',
+  selector: 'page-relatorio',
+  templateUrl: 'relatorio.html',
 })
-export class RestricoesPage {
+export class RelatorioPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,17 +21,11 @@ export class RestricoesPage {
   leite: number = this.navParams.data.leite;
   racao: number = this.navParams.data.racao;
   feno: number = this.navParams.data.feno;
-  doismeses: number;
-  doisaseismeses: number;
+  doismeses: number = this.navParams.data.doismeses;
+  doisaseismeses: number = this.navParams.data.doisaseismeses;
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RestricoesPage');
-  }
-
-  emitirRelatorio() {
-
-    this.navCtrl.push(RelatorioPage,{leite: this.leite, racao: this.racao, feno: this.feno, doismeses: this.doismeses, doisaseismeses: this.doisaseismeses});
-
+    console.log('ionViewDidLoad RelatorioPage');
   }
 
 }
