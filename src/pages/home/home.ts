@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestricoesPage } from '../restricoes/restricoes';
+import { RelatorioPage } from '../relatorio/relatorio';
 
 @Component({
   selector: 'page-home',
@@ -16,8 +17,8 @@ export class HomePage {
   racao: number;
   feno: number;
 
-  openPageRestricoes(){
-    this.navCtrl.push(RestricoesPage,{leite: this.leite, racao: this.racao, feno: this.feno});
+  emitirRelatorio(){
+    this.navCtrl.push(RelatorioPage,{leite: this.leite, racao: this.racao, feno: this.feno});
   }
 
 }

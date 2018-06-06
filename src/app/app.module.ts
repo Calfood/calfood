@@ -12,7 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestricoesPage } from '../pages/restricoes/restricoes';
 import { RelatorioPage } from '../pages/relatorio/relatorio';
-import  Glpk  from 'glpk';
+import { GlpkProvider } from '../providers/glpk/glpk';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import  Glpk  from 'glpk';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,7 +43,8 @@ import  Glpk  from 'glpk';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlpkProvider
   ]
 })
 export class AppModule {}
