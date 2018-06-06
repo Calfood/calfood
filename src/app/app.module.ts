@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestricoesPage } from '../pages/restricoes/restricoes';
 import { RelatorioPage } from '../pages/relatorio/relatorio';
+import  Glpk  from 'glpk';
 
 @NgModule({
   declarations: [
