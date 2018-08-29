@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>relatorio</ion-title>
+    <ion-title>Relatório</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,9 +16,9 @@
 <ion-content padding>
   <ion-card>
 
-      <p style="font-size:20px">O custo mínimo do fazendeiro será de <b>R$ {{custo_minimo}}</b>. Se adquirido <b>{{qtd_leite}}</b> Litros de leite a custo de <b>R$ {{custo_leite}}</b> por kg, se for adquirido <b>{{qtd_racao}}</b> Kg de ração a um custo de <b>R$ {{custo_racao}}</b>, e <b>{{qtd_feno}}</b> Kg de feno a um custo de <b>R$ {{custo_feno}}</b> por kg.</p>
+      <p style="font-size:20px">O custo mínimo do fazendeiro será de <b>R$ {{custo_minimo}}</b>.<br>Se adquirido <b>{{qtd_leite}}</b> Litros de leite a custo de <b>R$ {{custo_leite}}</b> por kg.<br>Se for adquirido <b>{{qtd_racao}}</b> Kg de ração a um custo de <b>R$ {{custo_racao}}</b> e <b>{{qtd_feno}}</b> Kg de feno a um custo de <b>R$ {{custo_feno}}</b> por kg.</p>
 
   </ion-card>
-  <button ion-button round full>Download&nbsp;&nbsp;&nbsp;<ion-icon name="download" item-end></ion-icon></button>
+  <button (click)="emitirDualidade()" ion-button round full>Dualidade&nbsp;&nbsp;&nbsp;<ion-icon name="arrow-right" item-end></ion-icon></button>
 
 </ion-content>

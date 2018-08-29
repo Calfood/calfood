@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlpkProvider } from '../../providers/glpk/glpk';
+import { RestricoesPage } from '../restricoes/restricoes';
 
 /**
  * Generated class for the RelatorioPage page.
@@ -23,10 +24,10 @@ export class RelatorioPage {
         console.log(data)
         var response = (data as any);
         var retorno = JSON.parse(response._body);
-        this.custo_minimo = retorno.custo_minimo;
-        this.qtd_racao = retorno.racao;
-        this.qtd_leite = retorno.leite;
-        this.qtd_feno = retorno.feno;
+        this.custo_minimo = retorno.custo_minimo.toString().replace('.',',');
+        this.qtd_racao = retorno.racao.toString().replace('.',',');
+        this.qtd_leite = retorno.leite.toString().replace('.',',');
+        this.qtd_feno = retorno.feno.toString().replace('.',',');
       },
       error=>{
         console.log(error);
@@ -45,6 +46,11 @@ export class RelatorioPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RelatorioPage');
+  }
+
+  
+  emitirDualidade() {
+    this.navCtrl.push(RestricoesPage);
   }
 
 }

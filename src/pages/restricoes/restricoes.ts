@@ -29,7 +29,7 @@ export class RestricoesPage {
     console.log('ionViewDidLoad RestricoesPage');
   }
 
-  emitirRelatorio() {
+  emitirDualidade() {
 
     this.navCtrl.push(RelatorioPage,{leite: this.leite, racao: this.racao, feno: this.feno, doismeses: this.doismeses, doisaseismeses: this.doisaseismeses});
 

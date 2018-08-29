@@ -18,8 +18,6 @@ export class GlpkProvider {
   private base_url = "http://localhost:3000/glpk/";
   
   sendRequest(data) {
-    console.log(data)
-
     return this.http.get(this.base_url+data.leite+'/'+data.racao+'/'+data.feno);
   }
 

@@ -2,25 +2,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>restrições</ion-title>
+    <ion-title>Dualidade</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Quantidade de bezerro de até 2 meses</ion-label>
-      <ion-input type="text" [(ngModel)]="doismeses"></ion-input>
-    </ion-item>
+  <ion-card>
 
-    <ion-item>
-      <ion-label floating>Quantidade de bezerro de 2 - 6 meses</ion-label>
-      <ion-input type="text" [(ngModel)]="doisaseismeses"></ion-input>
-    </ion-item>
+      <p style="font-size:20px">O custo mínimo do fazendeiro será de <b>R$ {{custo_minimo}}</b>.<br>Se adquirido <b>{{qtd_leite}}</b> Litros de leite a custo de <b>R$ {{custo_leite}}</b> por kg.<br>Se for adquirido <b>{{qtd_racao}}</b> Kg de ração a um custo de <b>R$ {{custo_racao}}</b> e <b>{{qtd_feno}}</b> Kg de feno a um custo de <b>R$ {{custo_feno}}</b> por kg.</p>
 
-  </ion-list>
+  </ion-card>
+  <button ion-button round full>Download&nbsp;&nbsp;&nbsp;<ion-icon name="download" item-end></ion-icon></button>
 
-    <button ion-button (click)="emitirRelatorio()" round full>Emitir Relatório</button>
 </ion-content>

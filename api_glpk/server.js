@@ -26,12 +26,23 @@ const server = http.createServer((req, res) => {
             if (d > 60) throw new Error("timeout");
 	        console.log(value);
         };
-       // function run(){
+       
             start = new Date(); 
-        //logNode.innerText = "";
-            var text = 'Minimize\nobj: + '+post[2]+' x1 + '+post[3]+' x2 + '+post[4]+' x3\nSubject To\ncap: + x1 + x2 >= 4\nop: + x1 + x2 + x3 >= 4.25\nopa: + x3 <= 0.25\nBounds\nx1 >= 0\nx2 >= 0\nx3 >= 0\nGenerals\nx1\nx2\nx3\nEnd';
-
-           // console.log(text);
+        
+            var text = 'Minimize\n'
+                      +'obj: + '+post[2]+' x1 + '+post[3]+' x2 + '+post[4]+' x3\n'
+                      +'Subject To\n'
+                      +'cap: + x1 + x2 >= 4\n'
+                      +'op: + x1 + x2 + x3 >= 4.25\n'
+                      +'opa: + x3 <= 0.25\n'
+                      +'Bounds\n'
+                      +'x1 >= 0\n'
+                      +'x2 >= 0\n'
+                      +'x3 >= 0\n'
+                      +'Generals\n'
+                      +'x1\n'
+                      +'x2\n'
+                      +'x3\nEnd';
 
             var lp = glp.glp_create_prob();
             //console.log(lp);
